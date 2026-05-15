@@ -1,0 +1,135 @@
+<Window x:Class="NotesWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Заметки" Height="560" Width="760"
+        MinHeight="500" MinWidth="680"
+        Background="#F4F6F8"
+        WindowStartupLocation="CenterScreen"
+        Closing="Window_Closing">
+    <Window.Resources>
+        <Style x:Key="PrimaryButton" TargetType="Button">
+            <Setter Property="MinWidth" Value="106" />
+            <Setter Property="Height" Value="36" />
+            <Setter Property="Margin" Value="0,0,8,8" />
+            <Setter Property="Padding" Value="12,0" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Background" Value="#2F80ED" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="BorderBrush" Value="#2F80ED" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+
+        <Style x:Key="SecondaryButton" TargetType="Button" BasedOn="{StaticResource PrimaryButton}">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Foreground" Value="#1F2937" />
+            <Setter Property="BorderBrush" Value="#C7D0DB" />
+        </Style>
+
+        <Style x:Key="DangerButton" TargetType="Button" BasedOn="{StaticResource PrimaryButton}">
+            <Setter Property="Background" Value="#D64545" />
+            <Setter Property="BorderBrush" Value="#D64545" />
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="18">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="18" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Grid.ColumnSpan="3"
+                   Margin="0,0,0,14"
+                   FontSize="24"
+                   FontWeight="SemiBold"
+                   Foreground="#1F2937"
+                   Text="Менеджер заметок" />
+
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBox x:Name="SearchTextBox"
+                     Grid.Row="0"
+                     Height="38"
+                     Margin="0,0,0,10"
+                     Padding="10,0"
+                     FontSize="15"
+                     VerticalContentAlignment="Center"
+                     TextChanged="SearchTextBox_TextChanged"
+                     ToolTip="Поиск заметок"
+                     Background="White"
+                     BorderBrush="#C7D0DB"
+                     BorderThickness="1" />
+
+            <ListBox x:Name="NotesListBox"
+                     Grid.Row="1"
+                     FontSize="15"
+                     SelectionChanged="NotesListBox_SelectionChanged"
+                     Background="White"
+                     BorderBrush="#C7D0DB"
+                     BorderThickness="1" />
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBox x:Name="NoteTextBox"
+                     Grid.Row="0"
+                     Padding="12"
+                     AcceptsReturn="True"
+                     TextWrapping="Wrap"
+                     VerticalScrollBarVisibility="Auto"
+                     FontSize="16"
+                     Background="White"
+                     BorderBrush="#C7D0DB"
+                     BorderThickness="1"
+                     ToolTip="Текст заметки">
+                <TextBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Белый фон" Tag="White" Click="ColorMenuItem_Click" />
+                        <MenuItem Header="Светло-желтый фон" Tag="#FFF7CC" Click="ColorMenuItem_Click" />
+                        <MenuItem Header="Светло-зеленый фон" Tag="#DFF5E1" Click="ColorMenuItem_Click" />
+                        <MenuItem Header="Светло-голубой фон" Tag="#E1F0FF" Click="ColorMenuItem_Click" />
+                    </ContextMenu>
+                </TextBox.ContextMenu>
+            </TextBox>
+
+            <WrapPanel Grid.Row="1"
+                       Margin="0,12,0,0">
+                <Button Content="Добавить"
+                        Click="AddButton_Click"
+                        Style="{StaticResource PrimaryButton}" />
+                <Button Content="Сохранить"
+                        Click="SaveButton_Click"
+                        Style="{StaticResource SecondaryButton}" />
+                <Button Content="Удалить"
+                        Click="DeleteButton_Click"
+                        Style="{StaticResource DangerButton}" />
+                <Button Content="Очистить"
+                        Click="ClearButton_Click"
+                        Style="{StaticResource SecondaryButton}" />
+            </WrapPanel>
+        </Grid>
+
+        <TextBlock x:Name="StatusTextBlock"
+                   Grid.Row="2"
+                   Grid.ColumnSpan="3"
+                   Margin="0,12,0,0"
+                   Foreground="#4B5563"
+                   FontSize="13"
+                   Text="Готово" />
+    </Grid>
+</Window>

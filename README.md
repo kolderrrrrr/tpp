@@ -1,9 +1,10 @@
 # Лабораторные работы по ТПП
 
-Репозиторий содержит две лабораторные работы на WPF:
+Репозиторий содержит три лабораторные работы на WPF:
 
 - `lab1-wpf` - приложение `Hello, World!`;
-- `lab2-wpf` - калькулятор с базовыми арифметическими операциями.
+- `lab2-wpf` - калькулятор с базовыми арифметическими операциями;
+- `lab3-wpf` - менеджер текстовых заметок.
 
 ## Как запустить на Windows
 
@@ -18,7 +19,8 @@ git clone <ссылка-на-репозиторий>
 4. Открыть файл `TppLabs.sln` в Visual Studio.
 5. В `Solution Explorer` выбрать нужный проект:
    - `HelloWorldWPF` для лабораторной 1;
-   - `CalculatorWPF` для лабораторной 2.
+   - `CalculatorWPF` для лабораторной 2;
+   - `NotesWPF` для лабораторной 3.
 6. Нажать `F5` для запуска.
 
 ## Структура
@@ -34,8 +36,16 @@ git clone <ссылка-на-репозиторий>
 │   ├── MainWindow.xaml.cs
 │   ├── README.md
 │   └── report.md
-└── lab2-wpf
-    ├── CalculatorWPF.csproj
+├── lab2-wpf
+│   ├── CalculatorWPF.csproj
+│   ├── App.xaml
+│   ├── App.xaml.cs
+│   ├── MainWindow.xaml
+│   ├── MainWindow.xaml.cs
+│   ├── README.md
+│   └── report.md
+└── lab3-wpf
+    ├── NotesWPF.csproj
     ├── App.xaml
     ├── App.xaml.cs
     ├── MainWindow.xaml
