@@ -1,0 +1,15 @@
+<Window x:Class="HelloWorldWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Hello World" Height="200" Width="400"
+        Background="#F4F8FF"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock Text="Hello, World!"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="24"
+                   FontWeight="SemiBold"
+                   Foreground="Blue" />
+    </Grid>
+</Window>
