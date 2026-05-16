@@ -1,0 +1,127 @@
+<Window x:Class="GuessNumberWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Угадай число" Height="500" Width="620"
+        MinHeight="460" MinWidth="560"
+        Background="#F4F6F8"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="PrimaryButton" TargetType="Button">
+            <Setter Property="MinWidth" Value="126" />
+            <Setter Property="Height" Value="38" />
+            <Setter Property="Margin" Value="0,0,10,0" />
+            <Setter Property="Padding" Value="14,0" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Background" Value="#2F80ED" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="BorderBrush" Value="#2F80ED" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+
+        <Style x:Key="SecondaryButton" TargetType="Button" BasedOn="{StaticResource PrimaryButton}">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Foreground" Value="#1F2937" />
+            <Setter Property="BorderBrush" Value="#C7D0DB" />
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="42" />
+            <Setter Property="Padding" Value="12,0" />
+            <Setter Property="FontSize" Value="17" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Background" Value="White" />
+            <Setter Property="BorderBrush" Value="#C7D0DB" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="22">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Margin="0,0,0,18"
+                   FontSize="26"
+                   FontWeight="SemiBold"
+                   Foreground="#1F2937"
+                   Text="Игра «Угадай число»" />
+
+        <Border Grid.Row="1"
+                Padding="22"
+                Background="White"
+                BorderBrush="#D7DEE8"
+                BorderThickness="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0"
+                           FontSize="18"
+                           FontWeight="SemiBold"
+                           Foreground="#1F2937"
+                           Text="{Binding Hint}" />
+
+                <TextBlock Grid.Row="1"
+                           Margin="0,8,0,18"
+                           FontSize="14"
+                           Foreground="#4B5563"
+                           Text="Введите число и проверьте свою догадку." />
+
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox x:Name="GuessTextBox"
+                             Grid.Column="0"
+                             Margin="0,0,12,0"
+                             Text="{Binding CurrentGuess, UpdateSourceTrigger=PropertyChanged}"
+                             ToolTip="Число от 1 до 100"
+                             PreviewTextInput="GuessTextBox_PreviewTextInput" />
+
+                    <Button Grid.Column="1"
+                            Content="Проверить"
+                            Click="CheckButton_Click"
+                            Style="{StaticResource PrimaryButton}" />
+                </Grid>
+
+                <TextBlock Grid.Row="3"
+                           Margin="0,18,0,0"
+                           FontSize="17"
+                           FontWeight="SemiBold"
+                           Foreground="{Binding MessageBrush}"
+                           Text="{Binding Message}"
+                           TextWrapping="Wrap" />
+
+                <StackPanel Grid.Row="4"
+                            Margin="0,22,0,0">
+                    <TextBlock FontSize="15"
+                               Foreground="#1F2937"
+                               Text="{Binding AttemptsText}" />
+                    <ProgressBar Height="10"
+                                 Margin="0,12,0,0"
+                                 Minimum="0"
+                                 Maximum="100"
+                                 Value="{Binding SearchProgress}" />
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <WrapPanel Grid.Row="2"
+                   Margin="0,16,0,0">
+            <Button Content="Новая игра"
+                    Click="RestartButton_Click"
+                    Style="{StaticResource SecondaryButton}" />
+        </WrapPanel>
+    </Grid>
+</Window>

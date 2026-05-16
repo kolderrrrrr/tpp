@@ -8,6 +8,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorWPF", "lab2-wpf\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesWPF", "lab3-wpf\NotesWPF.csproj", "{2D0E5C5A-0E07-4B90-9E67-14696A1BC56B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessNumberWPF", "lab4-wpf\GuessNumberWPF.csproj", "{12793EF4-5FA9-4C72-97A5-EB31F5476E41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotepadWPF", "lab5-wpf\NotepadWPF.csproj", "{C3C7BE68-3B2F-405B-B83C-ABE91E0ACA89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimatedCalculatorWPF", "lab6-wpf\AnimatedCalculatorWPF.csproj", "{A1961E6A-D15A-4B28-B60B-891F43681103}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomButtonTemplateWPF", "lab7-wpf\CustomButtonTemplateWPF.csproj", "{A2792A6B-459C-4695-A4BE-D60AD497FC4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizedNotepadWPF", "lab8-wpf\LocalizedNotepadWPF.csproj", "{4AF25527-9437-4DA9-BAEB-B65BCCFD25DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiStepFormWPF", "lab9-wpf\MultiStepFormWPF.csproj", "{4025817F-2785-4D0F-BC3D-13E42727F0D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +38,30 @@ Global
 		{2D0E5C5A-0E07-4B90-9E67-14696A1BC56B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D0E5C5A-0E07-4B90-9E67-14696A1BC56B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D0E5C5A-0E07-4B90-9E67-14696A1BC56B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12793EF4-5FA9-4C72-97A5-EB31F5476E41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12793EF4-5FA9-4C72-97A5-EB31F5476E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12793EF4-5FA9-4C72-97A5-EB31F5476E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12793EF4-5FA9-4C72-97A5-EB31F5476E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3C7BE68-3B2F-405B-B83C-ABE91E0ACA89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C7BE68-3B2F-405B-B83C-ABE91E0ACA89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C7BE68-3B2F-405B-B83C-ABE91E0ACA89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C7BE68-3B2F-405B-B83C-ABE91E0ACA89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1961E6A-D15A-4B28-B60B-891F43681103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1961E6A-D15A-4B28-B60B-891F43681103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1961E6A-D15A-4B28-B60B-891F43681103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1961E6A-D15A-4B28-B60B-891F43681103}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2792A6B-459C-4695-A4BE-D60AD497FC4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2792A6B-459C-4695-A4BE-D60AD497FC4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2792A6B-459C-4695-A4BE-D60AD497FC4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2792A6B-459C-4695-A4BE-D60AD497FC4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AF25527-9437-4DA9-BAEB-B65BCCFD25DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF25527-9437-4DA9-BAEB-B65BCCFD25DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF25527-9437-4DA9-BAEB-B65BCCFD25DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF25527-9437-4DA9-BAEB-B65BCCFD25DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4025817F-2785-4D0F-BC3D-13E42727F0D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4025817F-2785-4D0F-BC3D-13E42727F0D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4025817F-2785-4D0F-BC3D-13E42727F0D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4025817F-2785-4D0F-BC3D-13E42727F0D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

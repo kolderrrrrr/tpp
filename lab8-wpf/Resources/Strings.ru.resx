@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LanguageName" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="WindowTitle" xml:space="preserve">
+    <value>Многоязычный блокнот</value>
+  </data>
+  <data name="FileMenu" xml:space="preserve">
+    <value>_Файл</value>
+  </data>
+  <data name="NewMenuItem" xml:space="preserve">
+    <value>_Создать</value>
+  </data>
+  <data name="OpenMenuItem" xml:space="preserve">
+    <value>_Открыть...</value>
+  </data>
+  <data name="SaveMenuItem" xml:space="preserve">
+    <value>_Сохранить...</value>
+  </data>
+  <data name="CloseMenuItem" xml:space="preserve">
+    <value>_Закрыть</value>
+  </data>
+  <data name="LanguageLabel" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="UntitledFileName" xml:space="preserve">
+    <value>Новый документ</value>
+  </data>
+  <data name="DefaultFileName" xml:space="preserve">
+    <value>Новый документ.txt</value>
+  </data>
+  <data name="TextFileFilter" xml:space="preserve">
+    <value>Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*</value>
+  </data>
+  <data name="OpenDialogTitle" xml:space="preserve">
+    <value>Открыть файл</value>
+  </data>
+  <data name="SaveDialogTitle" xml:space="preserve">
+    <value>Сохранить файл</value>
+  </data>
+  <data name="StatusReady" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="StatusNewDocument" xml:space="preserve">
+    <value>Создан новый документ.</value>
+  </data>
+  <data name="StatusFileOpened" xml:space="preserve">
+    <value>Файл открыт.</value>
+  </data>
+  <data name="StatusFileSaved" xml:space="preserve">
+    <value>Файл сохранен.</value>
+  </data>
+  <data name="UnsavedChangesTitle" xml:space="preserve">
+    <value>Несохраненные изменения</value>
+  </data>
+  <data name="UnsavedChangesMessage" xml:space="preserve">
+    <value>В документе есть несохраненные изменения. Продолжить без сохранения?</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="OpenError" xml:space="preserve">
+    <value>Не удалось открыть файл: {0}</value>
+  </data>
+  <data name="SaveError" xml:space="preserve">
+    <value>Не удалось сохранить файл: {0}</value>
+  </data>
+</root>

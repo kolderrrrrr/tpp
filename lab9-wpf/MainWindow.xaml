@@ -1,0 +1,29 @@
+<Window x:Class="MultiStepFormWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Многоступенчатая форма" Height="620" Width="760"
+        MinHeight="540" MinWidth="660"
+        Background="#F4F6F8"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="22">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Margin="0,0,0,16"
+                   FontSize="25"
+                   FontWeight="SemiBold"
+                   Foreground="#1F2937"
+                   Text="Многоступенчатая форма регистрации" />
+
+        <Border Grid.Row="1"
+                Background="White"
+                BorderBrush="#D7DEE8"
+                BorderThickness="1">
+            <Frame x:Name="FormFrame"
+                   NavigationUIVisibility="Hidden" />
+        </Border>
+    </Grid>
+</Window>
