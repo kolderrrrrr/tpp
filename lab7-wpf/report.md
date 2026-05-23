@@ -37,7 +37,7 @@
 
 ## Проектирование ControlTemplate
 
-Основой шаблона стал элемент `Border`, который отвечает за фон, рамку и скругление углов. Внутри него расположен `Grid`, содержащий декоративный верхний слой `TopGlow` и `ContentPresenter` для отображения текста кнопки.
+Основой шаблона стал элемент `Border`, который отвечает за фон, рамку и скругление углов. Внутри него расположен `Grid`, содержащий декоративный верхний слой `TopGlow` и `TextBlock` для отображения текста кнопки.
 
 Фрагмент шаблона:
 
@@ -49,8 +49,8 @@
             BorderThickness="{TemplateBinding BorderThickness}">
         <Grid>
             <Border x:Name="TopGlow" />
-            <ContentPresenter HorizontalAlignment="Center"
-                              VerticalAlignment="Center" />
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
         </Grid>
     </Border>
 </ControlTemplate>

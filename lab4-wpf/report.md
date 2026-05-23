@@ -86,13 +86,13 @@ private void OnPropertyChanged([CallerMemberName] string? propertyName = null)
 ```csharp
 if (!int.TryParse(CurrentGuess.Trim(), out int guess))
 {
-    SetMessage("Введите целое число.", Brushes.Red);
+    SetMessage("Введите целое число.", ErrorBrush);
     return;
 }
 
 if (guess < MinNumber || guess > MaxNumber)
 {
-    SetMessage($"Число должно быть в диапазоне от {MinNumber} до {MaxNumber}.", Brushes.Red);
+    SetMessage($"Число должно быть в диапазоне от {MinNumber} до {MaxNumber}.", ErrorBrush);
     return;
 }
 ```

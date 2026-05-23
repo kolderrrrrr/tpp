@@ -14,3 +14,9 @@ obj/
 # macOS
 .DS_Store
 
+# Local .NET SDK installed by dotnet-install.sh
+.dotnet/
+.dotnet-home/
+.tools/
+**/bin/
+**/obj/

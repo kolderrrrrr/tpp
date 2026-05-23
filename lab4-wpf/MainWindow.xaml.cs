@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media;
 
 namespace GuessNumberWPF
 {
@@ -45,13 +44,13 @@ namespace GuessNumberWPF
         private int _targetNumber;
         private int _attempts;
         private string _message = string.Empty;
-        private Brush _messageBrush = NeutralBrush;
+        private string _messageBrush = NeutralBrush;
         private bool _isFinished;
 
-        private static readonly Brush NeutralBrush = CreateBrush(0x4B, 0x55, 0x63);
-        private static readonly Brush ErrorBrush = CreateBrush(0xD6, 0x45, 0x45);
-        private static readonly Brush WarningBrush = CreateBrush(0xB7, 0x79, 0x1F);
-        private static readonly Brush SuccessBrush = CreateBrush(0x1F, 0x8A, 0x4C);
+        private const string NeutralBrush = "#4B5563";
+        private const string ErrorBrush = "#D64545";
+        private const string WarningBrush = "#B7791F";
+        private const string SuccessBrush = "#1F8A4C";
 
         public GameState()
         {
@@ -115,7 +114,7 @@ namespace GuessNumberWPF
             }
         }
 
-        public Brush MessageBrush
+        public string MessageBrush
         {
             get => _messageBrush;
             private set
@@ -178,7 +177,7 @@ namespace GuessNumberWPF
             OnPropertyChanged(nameof(Hint));
         }
 
-        private void SetMessage(string message, Brush brush)
+        private void SetMessage(string message, string brush)
         {
             Message = message;
             MessageBrush = brush;
@@ -187,13 +186,6 @@ namespace GuessNumberWPF
         private void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        private static SolidColorBrush CreateBrush(byte red, byte green, byte blue)
-        {
-            SolidColorBrush brush = new SolidColorBrush(Color.FromRgb(red, green, blue));
-            brush.Freeze();
-            return brush;
         }
     }
 }
